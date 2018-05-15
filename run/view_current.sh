@@ -1,0 +1,1 @@
+../../run/robogen-file-viewer.exe ../outputs/current/GenerationBest-$1.json ../data/Conf_$2.txt --pause --output ../outputs/current/outputData --overwrite
