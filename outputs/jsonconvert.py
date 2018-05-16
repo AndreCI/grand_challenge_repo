@@ -108,7 +108,7 @@ if __name__ == "__main__":
 	for dir in dlist:
 		if os.path.isdir(dir):
 			current_dir_path = os.path.join(dir_path, dir)
-			file_name = 'GenerationBest-500.json'
+			file_name = 'GenerationBest-37.json'
 			file = os.path.join(current_dir_path, file_name)
 			if os.path.exists(file):
 				print("File %s found in dir %s." %(file_name, current_dir_path))
