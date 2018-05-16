@@ -1,0 +1,198 @@
+{
+ "id": 1,
+ "body": {
+  "part": [
+   {
+    "id": "CoreComponent",
+    "type": "CoreComponent",
+    "root": true,
+    "orientation": 0
+   },
+   {
+    "id": "myid1001",
+    "type": "IrSensor",
+    "root": false,
+    "orientation": 3
+   },
+   {
+    "id": "myid1003",
+    "type": "ParametricJoint",
+    "root": false,
+    "evolvableParam": [
+     {
+      "paramValue": 0.094607636332511902
+     },
+     {
+      "paramValue": -55.447906494140625
+     },
+     {
+      "paramValue": 0.0
+     }
+    ],
+    "orientation": 2
+   },
+   {
+    "id": "myid1000",
+    "type": "ActiveHinge",
+    "root": false,
+    "orientation": 2
+   },
+   {
+    "id": "myid1002",
+    "type": "LightSensor",
+    "root": false,
+    "orientation": 0
+   }
+  ],
+  "connection": [
+   {
+    "src": "CoreComponent",
+    "dest": "myid1001",
+    "srcSlot": 0,
+    "destSlot": 0
+   },
+   {
+    "src": "CoreComponent",
+    "dest": "myid1003",
+    "srcSlot": 1,
+    "destSlot": 0
+   },
+   {
+    "src": "CoreComponent",
+    "dest": "myid1000",
+    "srcSlot": 3,
+    "destSlot": 0
+   },
+   {
+    "src": "myid1000",
+    "dest": "myid1002",
+    "srcSlot": 1,
+    "destSlot": 0
+   }
+  ]
+ },
+ "brain": {
+  "neuron": [
+   {
+    "id": "CoreComponent-0",
+    "layer": "input",
+    "type": "simple",
+    "bodyPartId": "CoreComponent",
+    "ioId": 0,
+    "gain": 1.0
+   },
+   {
+    "id": "CoreComponent-1",
+    "layer": "input",
+    "type": "simple",
+    "bodyPartId": "CoreComponent",
+    "ioId": 1,
+    "gain": 1.0
+   },
+   {
+    "id": "CoreComponent-2",
+    "layer": "input",
+    "type": "simple",
+    "bodyPartId": "CoreComponent",
+    "ioId": 2,
+    "gain": 1.0
+   },
+   {
+    "id": "CoreComponent-3",
+    "layer": "input",
+    "type": "simple",
+    "bodyPartId": "CoreComponent",
+    "ioId": 3,
+    "gain": 1.0
+   },
+   {
+    "id": "CoreComponent-4",
+    "layer": "input",
+    "type": "simple",
+    "bodyPartId": "CoreComponent",
+    "ioId": 4,
+    "gain": 1.0
+   },
+   {
+    "id": "CoreComponent-5",
+    "layer": "input",
+    "type": "simple",
+    "bodyPartId": "CoreComponent",
+    "ioId": 5,
+    "gain": 1.0
+   },
+   {
+    "id": "myid1000-0",
+    "layer": "output",
+    "type": "sigmoid",
+    "bias": 0.0,
+    "bodyPartId": "myid1000",
+    "ioId": 0,
+    "gain": 1.0
+   },
+   {
+    "id": "myid1001-0",
+    "layer": "input",
+    "type": "simple",
+    "bodyPartId": "myid1001",
+    "ioId": 0,
+    "gain": 1.0
+   },
+   {
+    "id": "myid1002-0",
+    "layer": "input",
+    "type": "simple",
+    "bodyPartId": "myid1002",
+    "ioId": 0,
+    "gain": 1.0
+   }
+  ],
+  "connection": [
+   {
+    "src": "CoreComponent-0",
+    "dest": "myid1000-0",
+    "weight": -1.7986855506896973
+   },
+   {
+    "src": "CoreComponent-1",
+    "dest": "myid1000-0",
+    "weight": 0.1209435909986496
+   },
+   {
+    "src": "CoreComponent-2",
+    "dest": "myid1000-0",
+    "weight": 0.0
+   },
+   {
+    "src": "CoreComponent-3",
+    "dest": "myid1000-0",
+    "weight": 0.0
+   },
+   {
+    "src": "CoreComponent-4",
+    "dest": "myid1000-0",
+    "weight": -0.81261855363845825
+   },
+   {
+    "src": "CoreComponent-5",
+    "dest": "myid1000-0",
+    "weight": 0.0
+   },
+   {
+    "src": "myid1000-0",
+    "dest": "myid1000-0",
+    "weight": 0.0
+   },
+   {
+    "src": "myid1001-0",
+    "dest": "myid1000-0",
+    "weight": 0.0
+   },
+   {
+    "src": "myid1002-0",
+    "dest": "myid1000-0",
+    "weight": 0.0
+   }
+  ]
+ }
+}
