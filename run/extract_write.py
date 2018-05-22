@@ -45,6 +45,8 @@ def extract_conf(file):
 def write_into_csv(data, file):
  print(data)
  exist = True
+ fitness = data['scenario']
+ file += '_' + fitness + '.csv'
  if not os.path.exists(file): #check if we need the header
   exist = False
  with open(file, 'w', encoding='utf-8') as f:

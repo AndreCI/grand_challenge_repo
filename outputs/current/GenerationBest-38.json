@@ -1,0 +1,344 @@
+{
+ "id": 1,
+ "body": {
+  "part": [
+   {
+    "id": "CoreComponent",
+    "type": "CoreComponent",
+    "root": true,
+    "orientation": 0
+   },
+   {
+    "id": "myid1002",
+    "type": "ParametricJoint",
+    "root": false,
+    "evolvableParam": [
+     {
+      "paramValue": 0.082665160298347473
+     },
+     {
+      "paramValue": 60.232620239257813
+     },
+     {
+      "paramValue": 0.0
+     }
+    ],
+    "orientation": 2
+   },
+   {
+    "id": "myid1006",
+    "type": "PassiveHinge",
+    "root": false,
+    "orientation": 1
+   },
+   {
+    "id": "myid1007",
+    "type": "LightSensor",
+    "root": false,
+    "orientation": 1
+   },
+   {
+    "id": "myid1003",
+    "type": "ActiveHinge",
+    "root": false,
+    "orientation": 2
+   },
+   {
+    "id": "myid1015",
+    "type": "FixedBrick",
+    "root": false,
+    "orientation": 3
+   },
+   {
+    "id": "myid1005",
+    "type": "FixedBrick",
+    "root": false,
+    "orientation": 0
+   },
+   {
+    "id": "myid1009",
+    "type": "FixedBrick",
+    "root": false,
+    "orientation": 0
+   },
+   {
+    "id": "myid1010",
+    "type": "PassiveHinge",
+    "root": false,
+    "orientation": 0
+   },
+   {
+    "id": "myid1014",
+    "type": "LightSensor",
+    "root": false,
+    "orientation": 1
+   },
+   {
+    "id": "myid1000",
+    "type": "PassiveHinge",
+    "root": false,
+    "orientation": 1
+   },
+   {
+    "id": "myid1017",
+    "type": "LightSensor",
+    "root": false,
+    "orientation": 1
+   },
+   {
+    "id": "myid1013",
+    "type": "PassiveHinge",
+    "root": false,
+    "orientation": 1
+   },
+   {
+    "id": "myid1011",
+    "type": "PassiveHinge",
+    "root": false,
+    "orientation": 1
+   },
+   {
+    "id": "myid1012",
+    "type": "LightSensor",
+    "root": false,
+    "orientation": 1
+   }
+  ],
+  "connection": [
+   {
+    "src": "CoreComponent",
+    "dest": "myid1002",
+    "srcSlot": 0,
+    "destSlot": 0
+   },
+   {
+    "src": "myid1002",
+    "dest": "myid1006",
+    "srcSlot": 1,
+    "destSlot": 0
+   },
+   {
+    "src": "myid1006",
+    "dest": "myid1007",
+    "srcSlot": 1,
+    "destSlot": 0
+   },
+   {
+    "src": "CoreComponent",
+    "dest": "myid1003",
+    "srcSlot": 1,
+    "destSlot": 0
+   },
+   {
+    "src": "myid1003",
+    "dest": "myid1015",
+    "srcSlot": 1,
+    "destSlot": 0
+   },
+   {
+    "src": "myid1015",
+    "dest": "myid1005",
+    "srcSlot": 1,
+    "destSlot": 0
+   },
+   {
+    "src": "myid1005",
+    "dest": "myid1009",
+    "srcSlot": 1,
+    "destSlot": 0
+   },
+   {
+    "src": "myid1009",
+    "dest": "myid1010",
+    "srcSlot": 3,
+    "destSlot": 0
+   },
+   {
+    "src": "myid1010",
+    "dest": "myid1014",
+    "srcSlot": 1,
+    "destSlot": 0
+   },
+   {
+    "src": "myid1005",
+    "dest": "myid1000",
+    "srcSlot": 2,
+    "destSlot": 0
+   },
+   {
+    "src": "myid1015",
+    "dest": "myid1017",
+    "srcSlot": 2,
+    "destSlot": 0
+   },
+   {
+    "src": "CoreComponent",
+    "dest": "myid1013",
+    "srcSlot": 3,
+    "destSlot": 0
+   },
+   {
+    "src": "myid1013",
+    "dest": "myid1011",
+    "srcSlot": 1,
+    "destSlot": 0
+   },
+   {
+    "src": "myid1011",
+    "dest": "myid1012",
+    "srcSlot": 1,
+    "destSlot": 0
+   }
+  ]
+ },
+ "brain": {
+  "neuron": [
+   {
+    "id": "CoreComponent-0",
+    "layer": "input",
+    "type": "simple",
+    "bodyPartId": "CoreComponent",
+    "ioId": 0,
+    "gain": 1.0
+   },
+   {
+    "id": "CoreComponent-1",
+    "layer": "input",
+    "type": "simple",
+    "bodyPartId": "CoreComponent",
+    "ioId": 1,
+    "gain": 1.0
+   },
+   {
+    "id": "CoreComponent-2",
+    "layer": "input",
+    "type": "simple",
+    "bodyPartId": "CoreComponent",
+    "ioId": 2,
+    "gain": 1.0
+   },
+   {
+    "id": "CoreComponent-3",
+    "layer": "input",
+    "type": "simple",
+    "bodyPartId": "CoreComponent",
+    "ioId": 3,
+    "gain": 1.0
+   },
+   {
+    "id": "CoreComponent-4",
+    "layer": "input",
+    "type": "simple",
+    "bodyPartId": "CoreComponent",
+    "ioId": 4,
+    "gain": 1.0
+   },
+   {
+    "id": "CoreComponent-5",
+    "layer": "input",
+    "type": "simple",
+    "bodyPartId": "CoreComponent",
+    "ioId": 5,
+    "gain": 1.0
+   },
+   {
+    "id": "myid1003-0",
+    "layer": "output",
+    "type": "sigmoid",
+    "bias": -4.0,
+    "bodyPartId": "myid1003",
+    "ioId": 0,
+    "gain": 1.0
+   },
+   {
+    "id": "myid1007-0",
+    "layer": "input",
+    "type": "simple",
+    "bodyPartId": "myid1007",
+    "ioId": 0,
+    "gain": 1.0
+   },
+   {
+    "id": "myid1012-0",
+    "layer": "input",
+    "type": "simple",
+    "bodyPartId": "myid1012",
+    "ioId": 0,
+    "gain": 1.0
+   },
+   {
+    "id": "myid1014-0",
+    "layer": "input",
+    "type": "simple",
+    "bodyPartId": "myid1014",
+    "ioId": 0,
+    "gain": 1.0
+   },
+   {
+    "id": "myid1017-0",
+    "layer": "input",
+    "type": "simple",
+    "bodyPartId": "myid1017",
+    "ioId": 0,
+    "gain": 1.0
+   }
+  ],
+  "connection": [
+   {
+    "src": "CoreComponent-0",
+    "dest": "myid1003-0",
+    "weight": -3.6745543479919434
+   },
+   {
+    "src": "CoreComponent-1",
+    "dest": "myid1003-0",
+    "weight": -4.0
+   },
+   {
+    "src": "CoreComponent-2",
+    "dest": "myid1003-0",
+    "weight": 1.9331768751144409
+   },
+   {
+    "src": "CoreComponent-3",
+    "dest": "myid1003-0",
+    "weight": -1.8420661687850952
+   },
+   {
+    "src": "CoreComponent-4",
+    "dest": "myid1003-0",
+    "weight": -1.2839231491088867
+   },
+   {
+    "src": "CoreComponent-5",
+    "dest": "myid1003-0",
+    "weight": 0.017868002876639366
+   },
+   {
+    "src": "myid1003-0",
+    "dest": "myid1003-0",
+    "weight": 1.3276093006134033
+   },
+   {
+    "src": "myid1007-0",
+    "dest": "myid1003-0",
+    "weight": -1.5570944547653198
+   },
+   {
+    "src": "myid1012-0",
+    "dest": "myid1003-0",
+    "weight": -1.4568822383880615
+   },
+   {
+    "src": "myid1014-0",
+    "dest": "myid1003-0",
+    "weight": -1.7976154088973999
+   },
+   {
+    "src": "myid1017-0",
+    "dest": "myid1003-0",
+    "weight": -2.3235499858856201
+   }
+  ]
+ }
+}
