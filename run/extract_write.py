@@ -7,6 +7,7 @@ def extract_results(current_dir):
  data = {}
  with open(results, 'r', encoding='utf-8') as f:
   last_line = (f.readlines()[-1])[:-1].split(' ') #remove \n
+ print("Last genenation got score:", last_line)
  data['generations_done']=last_line[0]
  data['best_score']=last_line[1]
  data['avg_score']=last_line[2]
@@ -16,6 +17,7 @@ def extract_results(current_dir):
 def extract_evol_conf(file):
  conf_path = file.split('/')
  conf_path = conf_path[0] + '/' + conf_path[1] + '/'
+ print("Extracting data from [%s]..." %file)
  with open(file) as f:
   lines = (f.readlines())
  data = {}
@@ -43,15 +45,29 @@ def extract_conf(file):
  return data
  
 def write_into_csv(data, file):
- print(data)
- exist = True
+ exist = False
  fitness = data['scenario']
+ if "." in fitness:
+  fitness = fitness.split('.')[0] #remove .js
  file += '_' + fitness + '.csv'
- if not os.path.exists(file): #check if we need the header
-  exist = False
- with open(file, 'w', encoding='utf-8') as f:
+ print("writing into csv [%s]..." %file)
+ if os.path.exists(file): #check if we need the header
+  exist = True
+ with open(file, 'a', encoding='utf-8') as f:
   csvwriter = csv.DictWriter(f, data.keys())
   if not exist:
    csvwriter.writeheader()
   csvwriter.writerow(data)
+
+def move_current(writing_path, writing_dir, scenario):
+ writing_current = writing_path + writing_dir
+ dirs = os.listdir(writing_path)
+ num_dir = 0
+ for d in dirs:
+  if os.path.isdir(writing_path + d):
+   num_dir += 1
+ new_writing_current = writing_path + 'exp_' + str(num_dir) + '_' + scenario
+ print("Renaming [%s] into [%s]..." %(writing_current, new_writing_current))
+ os.rename(writing_current, new_writing_current)
+ 
  
